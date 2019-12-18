@@ -1,71 +1,49 @@
 <!DOCTYPE html>
-<head> 
+<head>
   <title>Brandon Hanlon</title>
+  <link rel="stylesheet" href="index.css" />
 </head>
 <html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
-}
+  <body>
+    <div class="bgimg">
+      <div class="middle">
+        <h1>COMING SOON</h1>
+        <hr />
+        <p id="count" style="font-size:30px"></p>
+        <hr />
+        <a href="https://github.com/give101k">
+          <img
+            src="./images/GitHub-Mark-Light-120px-plus.png"
+            alt=""
+            id="github"
+          />
+        </a>
+      </div>
+    </div>
 
-.bgimg {
-  background-image: url('https://images.unsplash.com/photo-1575141251061-c8259641ed63?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3000&q=80');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
-}
+    <script>
+      var countDownDate = new Date("Jan 5, 2020 0:0:0").getTime();
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+      var countdownfunction = setInterval(function() {
+        var now = new Date().getTime();
 
-hr {
-  margin: auto;
-  width: 40%;
-}
-</style>
-<body>
+        var distance = countDownDate - now;
 
-<div class="bgimg">
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-    <p id="demo" style="font-size:30px"></p>
-  </div>
-</div>
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-<script>
-var countDownDate = new Date("Jan 5, 2020 0:0:0").getTime();
+        document.getElementById("count").innerHTML =
+          days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-var countdownfunction = setInterval(function() {
-
-  var now = new Date().getTime();
-  
-  var distance = countDownDate - now;
-  
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-  
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
-</body>
+        if (distance < 0) {
+          clearInterval(countdownfunction);
+          document.getElementById("count").innerHTML = "EXPIRED";
+        }
+      }, 1000);
+    </script>
+  </body>
 </html>
