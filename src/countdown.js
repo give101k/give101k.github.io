@@ -36,7 +36,7 @@ export default class Countdown extends Component {
     return (
       <div>
         <p id="count">
-          {days} d {hours}h {minutes}m {seconds}s{" "}
+          {days} d {hours}h {minutes}m {seconds}s
         </p>
       </div>
     );
