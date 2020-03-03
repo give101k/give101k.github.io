@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Countdown extends Component {
   state = {
-    countdate: new Date("Feb 10, 2020 0:0:0").getTime(),
+    countdate: new Date("March 15, 2020 0:0:0").getTime(),
     days: 0,
     hours: 0,
     minutes: 0,
