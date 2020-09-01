@@ -2,13 +2,15 @@ import React from "react";
 import "../style/App.css";
 import Navbar from "./Navbar";
 import Main from "./Main";
+import Footer from "./Footer";
 import { TitleComponent } from "../TitleComponent.jsx";
 
 function App() {
   return (
     <>
-      <Navbar></Navbar>
-      <Main></Main>
+      <Navbar />
+      <Main />
+      <Footer />
     </>
   );
 }
