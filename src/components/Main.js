@@ -5,12 +5,11 @@ import Cv from "./Cv";
 import Project from "./Project";
 
 const Main = () => (
-  <>
+  <Switch>
     <Route exact path="/" component={Home} />
     <Route exact path="/projects" component={Project} />
     <Route exact path="/cv" component={Cv} />
-  </>
-
+  </Switch>
 );
 
 export default Main;
