@@ -8,10 +8,10 @@ import Skills from "./Skills";
 // with /roster or /schedule. The / route will only match
 // when the pathname is exactly the string "/"
 const Home = () => (
-  <>
+  <main className="page landing-page">
     <Intro></Intro>
     <Skills></Skills>
-  </>
+  </main>
 );
 
 export default Home;

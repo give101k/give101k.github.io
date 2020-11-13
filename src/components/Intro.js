@@ -1,49 +1,31 @@
 import React from "react";
+import Desc from "./Desc";
 import Avatar from "../img/avatars/brandon-hanlon.jpg";
-import Web1 from "../img/projects/Screen Shot 2019-05-06 at 9.42.42 AM.jpg";
-import Web2 from "../img/projects/Screen Shot 2019-05-06 at 9.43.23 AM.png";
+var Web1 = "https://quiet-everglades-10935.herokuapp.com/images/web1.jpg";
+var Web2 = "https://quiet-everglades-10935.herokuapp.com/images/human_emote.png"
+var Web3 = "https://quiet-everglades-10935.herokuapp.com/images/robot.png";
+
 
 function Intro() {
   return (
     <>
-      <section className="portfolio-block block-intro">
-        <div className="container">
-          <div
-            className="avatar"
-            style={{ backgroundImage: `url(${Avatar})` }}
-          ></div>
-          <div className="about-me">
-            <p>
-              Hello! I am <strong>Brandon Hanlon</strong>. I am recent college
-              student that graduated May 2020 from Montclair State University. I
-              have a passion for robotics, AI, and web development.
-            </p>
-            <a
-              className="btn btn-outline-primary"
-              role="button"
-              href="/contact"
-            >
-              Contact me
-            </a>
-          </div>
-        </div>
-      </section>
+      <Desc />
       <section className="portfolio-block photography">
         <div className="container">
           <div className="row no-gutters">
             <div className="col-md-6 col-lg-4 item zoom-on-hover">
-              <a href="#">
-                <img className="img-fluid image" src={Web1}></img>
+              <a href="/projects">
+                <img className="img-fluid image" src={Web1} style={{ Height: "100%" }}></img>
               </a>
             </div>
             <div className="col-md-6 col-lg-4 item zoom-on-hover">
-              <a href="#">
-                <img className="img-fluid image" src={Web1}></img>
+              <a href="/projects">
+                <img className="img-fluid image" src={Web2} style={{ Height: "100%" }}></img>
               </a>
             </div>
             <div className="col-md-6 col-lg-4 item zoom-on-hover">
-              <a href="#">
-                <img className="img-fluid image" src={Web1}></img>
+              <a href="/projects">
+                <img className="img-fluid image" src={Web3} style={{ Height: "100%" }}></img>
               </a>
             </div>
           </div>
